@@ -6,7 +6,7 @@ app.get('/api', (req, res) => {
   const slackName = req.query.slack_name;
   const track = req.query.track;
 
-  const currentTime = new Date().toISOString();
+  const currentTime = new Date().toISOString().split('.')[0] + "Z";
   
   const response = {
     slack_name: slackName,
